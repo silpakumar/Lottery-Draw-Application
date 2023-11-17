@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Lottery ticket</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+		<div class="modal" id="mymodal">
+			<div class="modal-dialog modal-dialog-scrollable ">
+				<div class="modal-content ">
+					<div class="modal-header">
+						<h4 class="modal-title">The winner is</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
+						<p id="demo1"></p>
+					</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-danger" data-dismiss="modal">close</button>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><br>
+	<button onclick="winner()">winner</button>
+	<p id="demo" style="color: red"></p>
+	<script type="text/javascript">
+		var x = [20,35,45,78,30,26,52 ];
+
+		// var len = x.length;
+		// var i;
+		// var text = "";
+		// function winner() {
+		// for (var i = 0; i <len; i++) {
+		// 	text = Math.floor(Math.random()* x); 
+		// 		}
+		// 	}
+		// 		console.log(text);
+
+		function winner() {
+			var result = Number(Math.floor(Math.random()*x.length));
+			var win=x[result];
+			document.getElementById("demo").innerHTML=win;
+			document.getElementById("demo1").innerHTML=win;
+			$('#mymodal').modal('show');
+			console.log(win);
+		}
+
+
+    	
+
+	</script>
+
+</body>
+</html>
